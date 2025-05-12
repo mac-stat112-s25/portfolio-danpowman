@@ -1,5 +1,15 @@
 ---
 title: "Univariate Viz"
 ---
+```{r}
+hikes <- read.csv("https://mac-stat.github.io/data/high_peaks.csv")
+```
+```{r}
+library(tidyverse)
+```
+```{r}
+ggplot(hikes,aes(x = elevation)) +
+  geom_density(fill = "blue", alpha = 0.4)+
+  theme_minimal()
+```
 
-Use this file to generate a professional looking **univariate** visualization. The visualization will not perfect the first time but you are expected to improve on it throughout the semester especially after covering advanced topics such as effective viz.

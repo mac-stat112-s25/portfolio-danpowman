@@ -2,4 +2,22 @@
 title: "Spatial Viz"
 ---
 
-Use this file to generate a professional looking **spatial** visualization.  The visualization will not perfect the first time but you are expected to improve on it throughout the semester especially after covering advanced topics such as effective viz.
+```{r}
+library(tidyverse)
+fave_places <- read.csv("https://hash-mac.github.io/stat112site-s25/data/our_fave_places.csv")
+```
+```{r}
+library(leaflet)
+```
+```{r}
+leaflet(data = fave_places) |>
+  addProviderTiles("USGS") |>
+  addCircles(weight = 10, opacity = 1, color ="red") |>
+  addPolylines(
+    lng = ~longitude,
+    lat = ~latitude,
+    color = "blue"
+  )
+```
+
+

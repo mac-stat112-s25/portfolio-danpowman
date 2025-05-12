@@ -2,4 +2,12 @@
 title: "Bivariate Viz"
 ---
 
-Use this file to generate a professional looking **bivariate** visualization.  The visualization will not perfect the first time but you are expected to improve it throughout the semester especially after covering advanced topics such as effective viz.
+```{r}
+ggplot(hikes, aes(x = rating, fill = difficulty)) + 
+  geom_bar(position = "dodge")+
+  labs(title = "Distribution of Difficulty",
+       x = "Difficulty Rating",
+       y = "Number of Hikes") +
+  theme_minimal()
+```
+
