@@ -12,12 +12,11 @@ library(leaflet)
 ```{r}
 leaflet(data = fave_places) |>
   addProviderTiles("USGS") |>
-  addCircles(weight = 10, opacity = 1, color ="red") |>
+  addCircles(weight = 10, opacity = 1, color = "red") |>
   addPolylines(
     lng = ~longitude,
     lat = ~latitude,
-    color = "blue"
-  )
+    color = "blue")
 ```
 
 
